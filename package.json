@@ -1,0 +1,21 @@
+{
+  "name": "eslint-config-fullhaus",
+  "version": "0.1.0",
+  "description": "Default ESLint configuration for FULLHAUS projects.",
+  "main": "index.mjs",
+  "author": "FULLHAUS GmbH <development@fullhaus.de>",
+  "license": "MIT",
+  "scripts": {
+    "test": "node index.mjs && node legacy"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.11.1",
+    "@stylistic/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^8.6.0",
+    "typescript-eslint": "^8.6.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8"
+  },
+  "packageManager": "pnpm@9.11.0"
+}
