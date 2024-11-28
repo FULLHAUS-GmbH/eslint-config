@@ -59,7 +59,7 @@ export default [
 ```json
 {
   "extends": [
-    "eslint-config-fullhaus/legacy/base"
+    "eslint-config-fullhaus/legacy/configs/base"
   ]
 }
 ```
