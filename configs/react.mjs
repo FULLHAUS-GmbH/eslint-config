@@ -1,4 +1,4 @@
-import rules from '../rules/base.js';
+import rules from '../rules/react.js';
 
 export default [
   {
