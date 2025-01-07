@@ -9,14 +9,14 @@
     "test": "node index.mjs && node legacy"
   },
   "dependencies": {
-    "@eslint/js": "^9.11.1",
+    "@eslint/js": "^9.17.0",
     "@stylistic/eslint-plugin": "^2.12.1",
-    "@typescript-eslint/parser": "^8.18.1",
-    "eslint-plugin-react": "^7.37.2",
-    "typescript-eslint": "^8.18.1"
+    "@typescript-eslint/parser": "^8.19.1",
+    "eslint-plugin-react": "^7.37.3",
+    "typescript-eslint": "^8.19.1"
   },
   "peerDependencies": {
     "eslint": ">=8"
   },
-  "packageManager": "pnpm@9.15.1"
+  "packageManager": "pnpm@9.15.3"
 }
