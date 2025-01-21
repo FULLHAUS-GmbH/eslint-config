@@ -36,4 +36,14 @@ module.exports = {
   'react/react-in-jsx-scope': 'off',
   'react/self-closing-comp': 'error',
   'react/void-dom-elements-no-children': 'error',
+
+  // Overrides
+  "@typescript-eslint/no-misused-promises": [
+    2,
+    {
+      "checksVoidReturn": {
+        "attributes": false,
+      },
+    },
+  ],
 };
