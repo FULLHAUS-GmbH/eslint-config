@@ -9,6 +9,7 @@
     "test": "node index.mjs && node legacy"
   },
   "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@eslint/js": "^9.17.0",
     "@stylistic/eslint-plugin": "^2.12.1",
     "@typescript-eslint/parser": "^8.19.1",
