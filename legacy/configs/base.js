@@ -6,6 +6,7 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
+    'plugin:@eslint-community/eslint-comments/recommended'
   ],
   rules: rules,
 };
