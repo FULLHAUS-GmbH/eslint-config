@@ -40,4 +40,7 @@ module.exports = {
   'no-prototype-builtins': 'off',
   'no-self-compare': 'error',
   'object-curly-spacing': ['error', 'always'],
+
+  // ESLint comments - https://eslint-community.github.io/eslint-plugin-eslint-comments/
+  '@eslint-community/eslint-comments/require-description': 'error',
 };
