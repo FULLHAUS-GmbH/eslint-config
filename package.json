@@ -10,14 +10,14 @@
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-    "@eslint/js": "^9.17.0",
-    "@stylistic/eslint-plugin": "^2.12.1",
-    "@typescript-eslint/parser": "^8.19.1",
-    "eslint-plugin-react": "^7.37.3",
-    "typescript-eslint": "^8.19.1"
+    "@eslint/js": "^9.20.0",
+    "@stylistic/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "eslint-plugin-react": "^7.37.4",
+    "typescript-eslint": "^8.23.0"
   },
   "peerDependencies": {
     "eslint": ">=8"
   },
-  "packageManager": "pnpm@9.15.4"
+  "packageManager": "pnpm@10.3.0"
 }
