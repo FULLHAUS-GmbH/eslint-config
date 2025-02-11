@@ -1,4 +1,4 @@
-const rules = require('../../rules/react');
+const rules = require('../../rules/typed-react');
 
 module.exports = {
   extends: [

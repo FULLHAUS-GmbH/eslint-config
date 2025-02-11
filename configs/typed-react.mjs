@@ -1,5 +1,5 @@
 import react from 'eslint-plugin-react';
-import rules from '../rules/react.js';
+import rules from '../rules/typed-react.js';
 
 export default [
   {
