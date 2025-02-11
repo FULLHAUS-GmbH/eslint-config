@@ -1,4 +1,4 @@
-const tsRules = require('../../rules/ts-rules.js');
+const tsRules = require('../../rules/typescript.js');
 
 module.exports = {
   extends: [

@@ -1,5 +1,5 @@
 import tsEslint from 'typescript-eslint';
-import tsRules from '../rules/ts-rules.js';
+import tsRules from '../rules/typescript.js';
 
 export default tsEslint.config(
   ...tsEslint.configs.recommendedTypeChecked,
