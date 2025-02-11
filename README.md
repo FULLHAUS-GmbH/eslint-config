@@ -1,23 +1,23 @@
-# FULLHAUS eslint configuration
+# FULLHAUS ESLint configuration
 
 This repository contains the ESLint configuration used for projects maintained by [**FULL**HAUS](https://www.fullhaus.de/). It provides
-configurations for both modern flat setups (ESLint v9+) and legacy projects (ESLint v8), with specific options for
-TypeScript and non-TypeScript codebases.
+a comprehensive set of ESLint rules configurations for both modern flat setups (ESLint v9+) and legacy projects (ESLint v8).
 
 ## Installation
 
 You can install the **FULL**HAUS ESLint configuration using a package manager of your choice:
 ```shell
-pnpm add FULLHAUS-GmbH/eslint-config-fullhaus --save-dev
+pnpm add @fullhaus/eslint-config --save-dev
 ```
+
+## Usage
 
 ### Flat config
 
-For projects using the [flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files), you can
-use the following setup:
+For projects using the [flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files), you can use following setup:
 
 ```js
-import fhEslint from 'eslint-config-fullhaus';
+import fhEslint from '@fullhaus/eslint-config';
 
 export default [
   ...fhEslint.configs.default,
@@ -32,7 +32,7 @@ for the `parserOptions.project` property. Usually this is the path to your`tscon
 ```json
 {
   "extends": [
-    "eslint-config-fullhaus/legacy"
+    "@fullhaus/eslint-config/legacy"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -40,53 +40,105 @@ for the `parserOptions.project` property. Usually this is the path to your`tscon
 }
 ```
 
-### Non TypeScript codebase
+### Custom Configurations
 
-If your project does not use TypeScript, you can skip the TypeScript-specific configuration.
+In case your project requires specific configurations (for example, a JavaScript-only codebase or just stylistic rules), you can selectively extend the configurations you need.
 
 **Flat config:**
 
 ```js
-import fhEslint from 'eslint-config-fullhaus';
+import fhEslint from '@fullhaus/eslint-config';
 
 export default [
-  ...fhEslint.configs.base,
+  ...fhEslint.configs.baseConfig, // js only
+  ...fhEslint.configs.stylisticConfig, // stylistic only
 ];
 ```
 
-**Legacy config:**
-
+**Legacy config**
 ```json
 {
   "extends": [
-    "eslint-config-fullhaus/legacy/configs/base"
+    "@fullhaus/eslint-config/legacy/configs/base",
+    "@fullhaus/eslint-config/legacy/configs/stylistic"
   ]
 }
 ```
 
 ### React
 
-For projects using React, you can extend your config with the React-specific ESLint rules.
+For React projects, you can extend your ESLint configuration with React-specific rules.
 
 **Flat config:**
 
 ```js
-import fhEslint from 'eslint-config-fullhaus';
+import fhEslint from '@fullhaus/eslint-config';
 
 export default [
-  ...fhEslint.configs.react,
+  ...fhEslint.configs.default,
+  ...fhEslint.configs.reactConfig,
+  // or when using React with TypeScript (.tsx):
+  ...fhEslint.configs.typedReactConfig,
 ];
 ```
 
 **Legacy config:**
 
-```json
+```json lines
 {
   "extends": [
-    "eslint-config-fullhaus/legacy/configs/react"
+    "@fullhaus/eslint-config/legacy",
+    "@fullhaus/eslint-config/legacy/configs/react",
+    // or when using React with TypeScript (.tsx):
+    "@fullhaus/eslint-config/legacy/configs/typed-react"
   ]
 }
 ```
+
+### Frameworks
+Frameworks (like Next.js) come with their own ESLint configuration, which can lead to plugin conflicts. To prevent these issues, our configuration provides all necessary rules. Here’s an example setup for a Next.js project:
+
+```js
+// example using next.js
+import fhEslint from '@fullhaus/eslint-config';
+
+export default [
+  ...compat.extends('next/core-web-vitals'),
+  ...fhEslint.configs.default,
+  {
+    rules: fhEslint.rules.typedReactRules,
+  },
+];
+```
+> [!NOTE]
+> Adjust the usage of `compat.extends` as required by your project’s setup.
+
+## Available Configurations and Rules
+The **FULL**HAUS ESLint Configuration package provides a modular set of configurations and rules designed to accommodate different project needs. Below is a list of the available options:
+
+### Flat Configuration (ESLint v9+)
+- `default`: The full recommended configuration.
+- `baseConfig`: Focuses on JavaScript (non-TypeScript) rules.
+- `stylisticConfig`: Enforces consistent code styling.
+- `reactConfig`: Contains React-specific ESLint rules.
+- `typedReactConfig`: Tailored React rules for TypeScript projects (e.g., .tsx files).
+
+### Legacy Configuration (ESLint v8)
+- `legacy`: The complete recommended configuration for legacy projects.
+- `legacy/configs/base`: JavaScript-focused configuration.
+- `legacy/configs/stylistic`: Stylistic rules for code consistency.
+- `legacy/configs/react`: React-specific configuration.
+- `legacy/configs/typed-react`: React configuration for TypeScript projects.
+
+### Rules
+- `baseRules`: Rules for JavaScript
+- `commentsRules`: Rules for ESLint comments
+- `reactRules`: Rules for React
+- `stylisticRules`: Rules for code styling
+- `typedReactRules`: Rules for React using TypeScript
+- `typescriptRules`: Rules for TypeScript
+
+Feel free to mix and match these configurations and rules to best suit your project’s requirements.
 
 ## License
 
