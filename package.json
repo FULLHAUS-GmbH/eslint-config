@@ -1,12 +1,23 @@
 {
-  "name": "eslint-config-fullhaus",
+  "name": "@fullhaus/eslint-config",
   "version": "0.1.0",
   "description": "Default ESLint configuration for FULLHAUS projects.",
   "main": "index.mjs",
   "author": "FULLHAUS GmbH <development@fullhaus.de>",
   "license": "MIT",
   "scripts": {
+    "version": "pnpm run test",
     "test": "node index.mjs && node legacy"
+  },
+  "files": [
+    "configs",
+    "legacy",
+    "rules",
+    "**.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FULLHAUS-GmbH/eslint-config.git"
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
