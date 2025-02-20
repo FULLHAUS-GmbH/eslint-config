@@ -6,8 +6,9 @@
   "author": "FULLHAUS GmbH <development@fullhaus.de>",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint",
     "version": "pnpm run test",
-    "test": "node index.mjs && node legacy"
+    "test": "pnpm lint && node index.mjs && node legacy"
   },
   "files": [
     "configs",
@@ -26,6 +27,10 @@
     "@typescript-eslint/parser": "^8.23.0",
     "eslint-plugin-react": "^7.37.4",
     "typescript-eslint": "^8.23.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.20.1",
+    "globals": "^15.15.0"
   },
   "peerDependencies": {
     "eslint": ">=8"
