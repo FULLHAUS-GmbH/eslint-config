@@ -27,7 +27,7 @@ module.exports = {
       beforeSelfClosing: 'always',
       afterOpening: 'never',
       beforeClosing: 'never',
-    }
+    },
   ],
   'react/jsx-wrap-multilines': 'error',
   'react/no-danger': 'error',
@@ -38,11 +38,11 @@ module.exports = {
   'react/void-dom-elements-no-children': 'error',
 
   // Overrides
-  "@typescript-eslint/no-misused-promises": [
+  '@typescript-eslint/no-misused-promises': [
     2,
     {
-      "checksVoidReturn": {
-        "attributes": false,
+      'checksVoidReturn': {
+        'attributes': false,
       },
     },
   ],
