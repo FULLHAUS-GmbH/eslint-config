@@ -24,6 +24,9 @@ export default [
 ];
 ```
 
+> [!WARNING]
+> The TypeScript config includes the [`prefer-nullish-coalescing`](https://typescript-eslint.io/rules/prefer-nullish-coalescing) rule which requires [`strictNullChecks`](https://www.typescriptlang.org/tsconfig#strictNullChecks) to be enabled in your `tsconfig.json`
+
 ### Legacy config
 
 If you're using a legacy configuration of ESLint (v8), extend the config as shown below. You must also provide a value
