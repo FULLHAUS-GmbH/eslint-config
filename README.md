@@ -1,7 +1,7 @@
 # FULLHAUS ESLint configuration
 
 This repository contains the ESLint configuration used for projects maintained by [**FULL**HAUS](https://www.fullhaus.de/). It provides
-a comprehensive set of ESLint rules configurations for both modern flat setups (ESLint v9+) and legacy projects (ESLint v8).
+a comprehensive set of ESLint rules configurations for modern flat setups (ESLint v9+).
 
 ## Installation
 
@@ -29,25 +29,11 @@ export default [
 
 ### Legacy config
 
-If you're using a legacy configuration of ESLint (v8), extend the config as shown below. You must also provide a value
-for the `parserOptions.project` property. Usually this is the path to your`tsconfig.json`.
-
-```json
-{
-  "extends": [
-    "@fullhaus/eslint-config/legacy"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  }
-}
-```
+This package no longer supports legacy ESLint (v8) configurations. If you still rely on the legacy setup, you can use [`@fullhaus/eslint-config@0.1.1`](https://github.com/FULLHAUS-GmbH/eslint-config/tree/v0.1.1), but note that its rules are no longer maintained or up to date.
 
 ### Custom Configurations
 
 In case your project requires specific configurations (for example, a JavaScript-only codebase or just stylistic rules), you can selectively extend the configurations you need.
-
-**Flat config:**
 
 ```js
 import fhEslint from '@fullhaus/eslint-config';
@@ -58,21 +44,9 @@ export default [
 ];
 ```
 
-**Legacy config**
-```json
-{
-  "extends": [
-    "@fullhaus/eslint-config/legacy/configs/base",
-    "@fullhaus/eslint-config/legacy/configs/stylistic"
-  ]
-}
-```
-
 ### React
 
 For React projects, you can extend your ESLint configuration with React-specific rules.
-
-**Flat config:**
 
 ```js
 import fhEslint from '@fullhaus/eslint-config';
@@ -83,19 +57,6 @@ export default [
   // or when using React with TypeScript (.tsx):
   ...fhEslint.configs.typedReactConfig,
 ];
-```
-
-**Legacy config:**
-
-```json lines
-{
-  "extends": [
-    "@fullhaus/eslint-config/legacy",
-    "@fullhaus/eslint-config/legacy/configs/react",
-    // or when using React with TypeScript (.tsx):
-    "@fullhaus/eslint-config/legacy/configs/typed-react"
-  ]
-}
 ```
 
 ### Frameworks
@@ -120,22 +81,24 @@ export default [
 The **FULL**HAUS ESLint Configuration package provides a modular set of configurations and rules designed to accommodate different project needs. Below is a list of the available options:
 
 ### Configurations
-| Flat               | Legacy                       | Description                                 |
-|--------------------|------------------------------|---------------------------------------------|
-| `default`          | `legacy`                     | The full recommended configuration          |
-| `baseConfig`       | `legacy/configs/base`        | JavaScript-focused configuration            |
-| `stylisticConfig`  | `legacy/configs/stylistic`   | Stylistic rules for code consistency        |
-| `reactConfig`      | `legacy/configs/react`       | Contains React-specific ESLint rules        |
-| `typedReactConfig` | `legacy/configs/typed-eact`) | React configuration for TypeScript projects |
-| `typescriptConfig` | `legacy/configs/typescript`  | TypeScript-focused configuration            |
+| Config             | Description                                 |
+|--------------------|---------------------------------------------|
+| `default`          | The full recommended configuration          |
+| `baseConfig`       | JavaScript-focused configuration            |
+| `stylisticConfig`  | Stylistic rules for code consistency        |
+| `reactConfig`      | Contains React-specific ESLint rules        |
+| `typedReactConfig` | React configuration for TypeScript projects |
+| `typescriptConfig` | TypeScript-focused configuration            |
 
 ### Rules
-- `baseRules`: Rules for JavaScript
-- `commentsRules`: Rules for ESLint comments
-- `reactRules`: Rules for React
-- `stylisticRules`: Rules for code styling
-- `typedReactRules`: Rules for React using TypeScript
-- `typescriptRules`: Rules for TypeScript
+| Rule Name         | Description                      |
+|-------------------|----------------------------------|
+| `baseRules`       | Rules for JavaScript             |
+| `commentsRules`   | Rules for ESLint comments        |
+| `reactRules`      | Rules for React                  |
+| `stylisticRules`  | Rules for code styling           |
+| `typedReactRules` | Rules for React using TypeScript |
+| `typescriptRules` | Rules for TypeScript             |
 
 Feel free to mix and match these configurations and rules to best suit your project’s requirements.
 
