@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // ESLint rules - https://eslint.org/docs/latest/rules/
   'curly': 'error',
   'eqeqeq': [

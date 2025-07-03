@@ -1,6 +1,6 @@
-const baseReactRules = require('../rules/react');
+import baseReactRules from '../rules/react.js';
 
-module.exports = {
+export default {
   ...baseReactRules,
 
   // Overrides

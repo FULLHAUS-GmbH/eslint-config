@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // eslint react rules https://github.com/jsx-eslint/eslint-plugin-react?tab=readme-ov-file#list-of-supported-rules
   'react/boolean-prop-naming': ['error'],
   'react/button-has-type': 'error',

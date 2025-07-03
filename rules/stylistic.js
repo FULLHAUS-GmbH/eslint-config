@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // ESLint Stylistic rules - https://eslint.style/rules
   '@stylistic/comma-dangle': ['error', 'always-multiline'],
   '@stylistic/comma-spacing': 'error',

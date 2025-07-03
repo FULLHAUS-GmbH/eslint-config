@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // typescript-eslint rules - https://typescript-eslint.io/rules/
   '@typescript-eslint/explicit-function-return-type': 'error',
   '@typescript-eslint/no-explicit-any': 'off',
