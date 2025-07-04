@@ -13,6 +13,7 @@ declare const _default: {
      * - {@linkcode commentsConfig}
      * - {@linkcode stylisticConfig}
      * - {@linkcode typescriptConfig}
+     * - {@linkcode unicornConfig}
      */
     default: Linter.Config[];
     /**
@@ -39,6 +40,10 @@ declare const _default: {
      * Configuration for TypeScript
      */
     typescriptConfig: Linter.Config[];
+    /**
+     * Configuration for modern and consistent JavaScript practices
+     */
+    unicornConfig: Linter.Config[];
   }
   /**
    * Collection of rules used for configuration
@@ -75,6 +80,11 @@ declare const _default: {
      * @see https://typescript-eslint.io/rules/
      */
     typescriptRules: Linter.RulesRecord,
+    /**
+     * Rules for eslint-plugin-unicorn
+     * @see https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main?tab=readme-ov-file#rules
+     */
+    unicornRules: Linter.RulesRecord,
   };
 }
 
