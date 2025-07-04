@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint",
     "version": "pnpm run test",
-    "test": "pnpm lint && node index.mjs && node legacy"
+    "test": "pnpm lint && node index.js"
   },
   "files": [
     "configs",
