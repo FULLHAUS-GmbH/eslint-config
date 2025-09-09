@@ -1,6 +1,6 @@
 {
   "name": "@fullhaus/eslint-config",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Default ESLint configuration for FULLHAUS projects.",
   "main": "index.js",
   "author": "FULLHAUS GmbH <development@fullhaus.de>",
