@@ -14,6 +14,7 @@ declare const _default: {
      * - {@linkcode stylisticConfig}
      * - {@linkcode typescriptConfig}
      * - {@linkcode unicornConfig}
+     * - {@linkcode importConfig}
      */
     default: Linter.Config[];
     /**
@@ -44,6 +45,10 @@ declare const _default: {
      * Configuration for modern and consistent JavaScript practices
      */
     unicornConfig: Linter.Config[];
+    /**
+     * Configuration for best practices and code styles regarding imports.
+     */
+    importConfig: Linter.Config[];
   }
   /**
    * Collection of rules used for configuration
@@ -85,6 +90,11 @@ declare const _default: {
      * @see https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main?tab=readme-ov-file#rules
      */
     unicornRules: Linter.RulesRecord,
+    /**
+     * Rules for eslint-plugin-import
+     * @see https://github.com/import-js/eslint-plugin-import?tab=readme-ov-file#rules
+     */
+    importRules: Linter.RulesRecord,
   };
 }
 

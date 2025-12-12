@@ -5,6 +5,7 @@ import stylisticConfig from './configs/stylistic.js';
 import typedReactConfig from './configs/typed-react.js';
 import typescriptConfig from './configs/typescript.js';
 import unicornConfig from './configs/unicorn.js';
+import importConfig from './configs/import.js';
 import baseRules from './rules/base.js';
 import commentsRules from './rules/comments.js';
 import reactRules from './rules/react.js';
@@ -12,6 +13,7 @@ import stylisticRules from './rules/stylistic.js';
 import typedReactRules from './rules/typed-react.js';
 import typescriptRules from './rules/typescript.js';
 import unicornRules from './rules/unicorn.js';
+import importRules from './rules/import.js';
 
 export default {
   configs: {
@@ -21,6 +23,7 @@ export default {
       ...stylisticConfig,
       ...typescriptConfig,
       ...unicornConfig,
+      ...importConfig,
     ],
     baseConfig,
     commentsConfig,
@@ -29,6 +32,7 @@ export default {
     typedReactConfig,
     typescriptConfig,
     unicornConfig,
+    importConfig,
   },
   rules: {
     baseRules,
@@ -38,5 +42,6 @@ export default {
     typedReactRules,
     typescriptRules,
     unicornRules,
+    importRules,
   },
 };
