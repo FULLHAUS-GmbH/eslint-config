@@ -11,6 +11,7 @@ export default {
     'error',
     {
       groups: ['builtin', 'external', 'parent', 'sibling', 'index', 'type'],
+      sortTypesGroup: true,
       'newlines-between': 'never',
     },
   ],
