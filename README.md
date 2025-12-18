@@ -90,6 +90,7 @@ The **FULL**HAUS ESLint Configuration package provides a modular set of configur
 | `typedReactConfig` | React configuration for TypeScript projects |
 | `typescriptConfig` | TypeScript-focused configuration            |
 | `unicornConfig`    | Opinionated JS code style configuration     |
+| `importConfig`     | Configuration for best practice imports     |
 
 ### Rules
 | Rule Name         | Description                      |
@@ -101,6 +102,7 @@ The **FULL**HAUS ESLint Configuration package provides a modular set of configur
 | `typedReactRules` | Rules for React using TypeScript |
 | `typescriptRules` | Rules for TypeScript             |
 | `unicornRules`    | Rules for extended code styles   |
+| `importRules`     | Rules for best practice imports  |
 
 Feel free to mix and match these configurations and rules to best suit your project’s requirements.
 
