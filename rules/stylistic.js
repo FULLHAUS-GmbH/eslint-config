@@ -20,6 +20,7 @@ export default {
     { blankLine: 'always', prev: '*', next: 'default' },
     { blankLine: 'always', prev: '*', next: 'do' },
     { blankLine: 'always', prev: '*', next: 'export' },
+    { blankLine: 'any', prev: 'export', next: 'export' },
     { blankLine: 'always', prev: '*', next: 'for' },
     { blankLine: 'always', prev: '*', next: 'if' },
     { blankLine: 'always', prev: '*', next: 'return' },
