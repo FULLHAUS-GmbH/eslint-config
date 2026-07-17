@@ -32,6 +32,8 @@
     "typescript-eslint": "^8.50.0"
   },
   "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.64.0",
+    "@html-eslint/parser": "^0.64.0",
     "eslint": "^9.39.2",
     "globals": "^16.5.0"
   },
